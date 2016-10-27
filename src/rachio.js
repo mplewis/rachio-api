@@ -51,9 +51,9 @@ class SparseZone {
     this.data = data
   }
 
-  async start (duration) {
+  start (duration) {
     const data = {id: this.data.id, duration: duration}
-    return await this._rachio._put('/public/zone/start', data)
+    return this._rachio._put('/public/zone/start', data)
   }
 }
 
@@ -62,16 +62,16 @@ export class Rachio {
     this.apiKey = apiKey
   }
 
-  async _req (method, path, data) {
-    return await req(this.apiKey, method, path, data)
+  _req (method, path, data) {
+    return req(this.apiKey, method, path, data)
   }
 
-  async _get (path, data) {
-    return await this._req('GET', path, data)
+  _get (path, data) {
+    return this._req('GET', path, data)
   }
 
-  async _put (path, data) {
-    return await this._req('PUT', path, data)
+  _put (path, data) {
+    return this._req('PUT', path, data)
   }
 
   async _meId () {
@@ -80,8 +80,8 @@ export class Rachio {
     return id
   }
 
-  async person (id) {
-    return await this._get(`/public/person/${id}`)
+  person (id) {
+    return this._get(`/public/person/${id}`)
   }
 
   async me () {
