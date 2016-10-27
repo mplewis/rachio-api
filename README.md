@@ -2,7 +2,7 @@
 
 An example Rachio API client in ES6. Waters my lawn.
 
-Check out the Rachio API docs.
+Check out the [Rachio API docs](https://rachio.readme.io/).
 
 # Quickstart
 
