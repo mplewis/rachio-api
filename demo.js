@@ -5,7 +5,7 @@ const targetDevice = 'Mister Googly'  // Name of the Rachio to use
 const targetZone = 1  // Number of the zone to water
 const waterDuration = 5  // How long to water, in seconds
 
-// This has to be async because r.me() returns a Promise
+// This has to be async because we await some results
 async function main () {
   // Sign into Rachio
   const r = new Rachio(apiKey)
