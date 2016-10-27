@@ -1,9 +1,11 @@
 import {Rachio} from './src/rachio'
 
 const apiKey = process.env.RACHIO_API_KEY
-const targetDevice = 'Mister Googly'
-const targetZone = 'Backyard'
+const targetDevice = 'Mister Googly'  // Name of the Rachio to use
+const targetZone = 1  // Number of the zone to water
+const waterDuration = 5  // How long to water, in seconds
 
+// This has to be async because r.me() returns a Promise
 async function main () {
   // Sign into Rachio
   const r = new Rachio(apiKey)
@@ -25,11 +27,11 @@ async function main () {
   )
 
   // Get the named zone
-  const zone = zones.filter(z => z.data.name === targetZone)[0]
+  const zone = zones.filter(z => z.data.zoneNumber === targetZone)[0]
   console.log(zone)
 
   // Water the zone for 5 seconds
-  zone.start(5)
+  zone.start(waterDuration)
 }
 
 main()
