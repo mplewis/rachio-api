@@ -15,7 +15,7 @@ async function main () {
   console.log(me)
 
   // Get the named device
-  const device = me.devices.filter(d => d.data.name === targetDevice)[0]
+  const device = me.devices.find(d => d.data.name === targetDevice)
   console.log(device)
 
   // Get all device zones
@@ -27,7 +27,7 @@ async function main () {
   )
 
   // Get the named zone
-  const zone = zones.filter(z => z.data.zoneNumber === targetZone)[0]
+  const zone = zones.find(z => z.data.zoneNumber === targetZone)
   console.log(zone)
 
   // Water the zone for the specified duration
