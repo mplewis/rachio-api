@@ -30,7 +30,7 @@ async function main () {
   const zone = zones.filter(z => z.data.zoneNumber === targetZone)[0]
   console.log(zone)
 
-  // Water the zone for 5 seconds
+  // Water the zone for the specified duration
   zone.start(waterDuration)
 }
 

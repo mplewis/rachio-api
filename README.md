@@ -8,10 +8,12 @@ Check out the [Rachio API docs](https://rachio.readme.io/).
 
 ## Setup
 
-```
-export RACHIO_API_KEY='your-api-key'  # Find this in the webapp: app.rach.io
+```sh
+# Find this in the webapp: app.rach.io
+export RACHIO_API_KEY='your-api-key'
 
-npm install -g jspm  # Only if you don't have jspm installed globally
+# Only if you don't have jspm installed globally
+npm install -g jspm
 
 # In the project directory
 npm install
@@ -20,9 +22,8 @@ jspm install
 
 ## Usage
 
-```
-# Waters my one-zone lawn for 5 seconds.
-# See demo.js for details.
+```sh
+# Waters my one-zone lawn for 5 seconds. See demo.js for details.
 jspm run demo
 ```
 
