@@ -31,7 +31,7 @@ async function main () {
   console.log(zone)
 
   // Water the zone for the specified duration
-  zone.start(waterDuration)
+  await zone.start(waterDuration)
 }
 
 main()
